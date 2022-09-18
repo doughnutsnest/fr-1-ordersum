@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+
+
+
+body {
+    margin: 0;
+    background-color: var(--Pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 16px;
+    font-family: 'red hat display', sans-serif;
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    body {background-image: url('images/pattern-background-mobile.svg');}}
+@media (orientation: landscape) {
+    body {background-image: url('images/pattern-background-desktop.svg');}}
+
+
+
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    width: 20rem;
+    background-color: var(--Very-pale-blue);
+    box-shadow: 0 .5rem 1rem hsl(224, 23%, 80%);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__hero {width: 100%; border-radius: 1.5rem 1.5rem 0 0;}
+.card__h1 {color: var(--Dark-blue); font-size: 1.5rem; font-weight: 900;}
+.card__p {color: var(--Desaturated-blue); padding: 0 1.5em;}
+.card__btn1 {background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    width: 90%;
+    height: 3.5em;
+    font-weight: 700;
+    border-radius: .8rem;
+    border: none;
+    margin: .5rem 1rem;
+    box-shadow: 0 1rem 1rem hsl(224, 23%, 80%);
+    font-size: 16px;}
+.card__btn2 {color: var(--Desaturated-blue);
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    margin-top: 1rem;}
+
+.card__btn1:hover {background-color: hsl(278, 75%, 52%); cursor: pointer;}
+.card__btn2:hover {color: var(--Dark-blue); font-weight: 700; cursor: pointer;}
+
+
+.plan {
+    background-color: hsl(225, 100%, 96%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: .8rem;
+    border-radius: .5rem;
+}
+
+.plan__icon {width: 3rem; height: 3rem;}
+.plan__container {display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    width: 8rem;}
+.plan__annu {margin: 0; height: 1.2em; font-weight: 700; color: var(--Dark-blue);}
+.plan__dollar {margin: 0; height: 1.2em; color: var(--Desaturated-blue);}
+.plan__change a {color: var(--Bright-blue);}
+
+.plan__change a:hover {text-decoration: none; cursor: pointer;}
+
+
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--Dark-blue);}
+.attribution a { color: var(--Bright-blue); text-decoration: none; }
